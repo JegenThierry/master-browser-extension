@@ -1,0 +1,38 @@
+.my-fonting {
+	font-size: small;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.context-menu {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	padding: 0.5em;
+	border-radius: 0.5em;
+	width: auto;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.context-header {
+	margin: 0 -0.5em 0.25em -0.5em;
+	padding: 0 1em 0.5em 1em;
+	border-bottom: 1px solid gray;
+}
+
+.generic-button {
+	background-color: white;
+	padding: 0 0.5em 0.5em 0.5em;
+	border-radius: 0.25em;
+	border: 0;
+	text-align: left;
+	font-size: small;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.generic-button:hover {
+	transition: all 200ms;
+	text-decoration: underline;
+	cursor: pointer;
+}
