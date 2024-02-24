@@ -38,7 +38,6 @@ function runScript() {
   const ratingContextMenu: ContextMenuElement = new ContextMenuElement(ContextMenuType.Rating);
 
   const infoElement: InfoElement = new InfoElement();
-
   let markingElementsCollections: MarkElementsCollection[] = [];
   const markingTaskData: MarkingData = new MarkingData();
   const semanticTaskData: SemanticData = new SemanticData();
@@ -106,7 +105,6 @@ function runScript() {
           markingElementsCollections.push(collection);
         } catch (error) {
           apiService.updateLoadFail(mark.id);
-          console.warn(error);
         }
       });
 
