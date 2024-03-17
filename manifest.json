@@ -1,0 +1,29 @@
+{
+	"name": "Studie Thierry Jegen",
+	"description": "Browser Erweiterung für die Masterarbeit von Thierry Jegen (thierryjegen@gmail.com).",
+	"version": "1.0.0",
+	"manifest_version": 3,
+	"host_permissions": ["*://*/*"],
+	"icons": {
+		"16": "/assets/extension_icons/extensionIcon16.png",
+		"32": "/assets/extension_icons/extensionIcon32.png",
+		"48": "/assets/extension_icons/extensionIcon48.png",
+		"64": "/assets/extension_icons/extensionIcon64.png",
+		"128": "/assets/extension_icons/extensionIcon128.png"
+	},
+	"background": {
+		"service_worker": "./js/background.js"
+	},
+	"action": {
+		"default_popup": "./index.html"
+	},
+	"permissions": ["activeTab", "tabs", "storage", "scripting"],
+	"externally_connectable": {
+		"matches": [
+			"http://localhost:5173/*",
+			"https://lively-plant-048fef603.4.azurestaticapps.net/*",
+			"https://lively-plant-048fef603-preview.westeurope.4.azurestaticapps.net/*"
+		],
+		"accepts_tls_channel_id": true
+	}
+}
