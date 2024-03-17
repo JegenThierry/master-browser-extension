@@ -2,12 +2,13 @@ import axios from "axios";
 import { API_URL } from "../model/constants";
 import SemanticTag from "../model/semanticTag";
 import Task from "../model/task";
+import MarkingTaskData from "../model/marks/markingTaskData";
 
 class ApiService {
-  public async fetchUserMarkings(userId: string, url: string): Promise<string[]> {
-    let apiUrl = `${API_URL}/RatingTask/userRatings`;
+  public async fetchUserMarkings(userId: string, url: string): Promise<MarkingTaskData[]> {
+    let apiUrl = `${API_URL}/Mark`;
     apiUrl += `?userId=${encodeURIComponent(userId)}`;
-    apiUrl += `&url=${encodeURIComponent(url)}`;
+    apiUrl += `&link=${encodeURIComponent(url)}`;
 
     const res = await axios.get(url);
     return res.data;

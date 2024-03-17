@@ -9,7 +9,7 @@ import { GlobalEvents, Ids, URL_GAME, WEBSOCKETS_BASE } from "./model/constants"
 import eventEmitter from "./model/EventManger";
 import MarkingData from "./model/marks/markingData";
 import MarkingTaskData from "./model/marks/markingTaskData";
-import apiService, { fetchMarkedTexts } from "./service/apiService";
+import apiService from "./service/apiService";
 import RatingData from "./model/ratingData";
 import SemanticTag from "./model/semanticTag";
 import SemanticData from "./model/semanticData";
@@ -80,7 +80,7 @@ function runScript() {
   function updateMarkings() {
     if (!currentUser) return;
 
-    fetchMarkedTexts(currentUser.uid, windowUrl).then((marks: MarkingTaskData[]) => {
+    apiService.fetchUserMarkings(currentUser.uid, windowUrl).then((marks: MarkingTaskData[]) => {
       marks.forEach((mark: MarkingTaskData) => {
         try {
           const collectionFound = markingElementsCollections.find((x) => x.id == mark.id);
