@@ -1,4 +1,4 @@
-export const API_URL = "https://localhost:7262/api";
+export const API_URL = "http://localhost:5295/api";
 // export const API_URL = 'https://media-intermediary-backend20231230161702.azurewebsites.net/api';
 
 // export const GAME_URL = 'https://lively-plant-048fef603.4.azurestaticapps.net';

@@ -1,11 +1,11 @@
-export const API_URL = "https://localhost:7262/api";
+export const API_URL = "http://localhost:5295/api";
 // export const API_URL = "https://media-intermediary-backend20231230161702.azurewebsites.net/api";
 
 // export const URL_GAME = "https://lively-plant-048fef603.4.azurestaticapps.net";
 export const URL_GAME = "http://localhost:5173";
 
 // export const WEBSOCKETS_BASE = "https://media-intermediary-backend20231230161702.azurewebsites.net";
-export const WEBSOCKETS_BASE = "https://localhost:7262/userHub";
+export const WEBSOCKETS_BASE = "http://localhost:5295/userHub";
 
 export const FILE_PATHS = {
   FOREGROUND_JS: "/js/foreground.js",

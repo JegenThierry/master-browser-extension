@@ -19,15 +19,16 @@ let activeTabId: number = 0;
 let urls: string[] = [];
 
 async function isSupportedUrl(url: string) {
-	if (url.includes("localhost")) return true;
-	if (url.includes(URL_GAME)) return true;
+	return true;
+	// if (url.includes("localhost")) return true;
+	// if (url.includes(URL_GAME)) return true;
 
-	if (urls.length == 0) urls = await apiService.fetchSupportedUrls();
+	// if (urls.length == 0) urls = await apiService.fetchSupportedUrls();
 
-	const activeTask = await StorageService.getActiveTask();
-	if (activeTask?.taskType == TaskType.ExploringTask || activeTask?.taskType == TaskType.TimingTask) return true;
+	// const activeTask = await StorageService.getActiveTask();
+	// if (activeTask?.taskType == TaskType.ExploringTask || activeTask?.taskType == TaskType.TimingTask) return true;
 
-	return urls.includes(url);
+	// return urls.includes(url);
 }
 
 function setBadgeText(text: string) {
@@ -115,6 +116,7 @@ async function setActiveTask(task: Task | undefined, url?: string) {
 Browser.tabs.onUpdated.addListener(handleUpdateTab);
 
 function isMondayTuesdayWednesday() {
+	return false;
 	const today = new Date();
 	const dayOfWeek = today.getDay();
 	// Check if the day is Monday (1), Tuesday (2), or Wednesday (3)

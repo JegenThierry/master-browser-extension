@@ -10,8 +10,9 @@ class ApiService {
     apiUrl += `?userId=${encodeURIComponent(userId)}`;
     apiUrl += `&link=${encodeURIComponent(url)}`;
 
-    const res = await axios.get(url);
-    return res.data;
+    const res = await fetch(apiUrl);
+    const markingTaskData = await res.json();
+    return markingTaskData.map((m:MarkingTaskData) => new MarkingTaskData(m));
   }
 
   public async fetchRandomTag(userId: string): Promise<SemanticTag> {
